@@ -1,0 +1,55 @@
+// Getting record single user with multiple id's
+
+{
+  usertwo: user(id:2){
+    id
+    name
+
+  }
+  userTHree:user(id:3){
+    id
+    name
+  }
+
+}
+
+
+// Getting All users Data Query 
+
+{
+    users{
+        id
+        name
+        email
+    }
+}
+
+
+// Getting Single USer Data 
+{
+        user(id:1){
+            id
+            name
+            email
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
