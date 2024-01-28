@@ -35,6 +35,126 @@
 }
 
 
+// Pagintor Query--
+
+{
+  users(first: 5, page: 1) {
+    data {
+      id
+      name
+      email
+    }
+    paginatorInfo {
+      currentPage
+      lastPage
+      total
+    }
+  }
+}
+
+// Pagintor Output--
+
+{
+  "data": {
+    "users": {
+      "data": [
+        {
+          "id": "1",
+          "name": "Elody Hansen",
+          "email": "rpurdy@example.com"
+        },
+        {
+          "id": "2",
+          "name": "Dr. Demario O'Hara",
+          "email": "breitenberg.abdullah@example.com"
+        },
+        {
+          "id": "3",
+          "name": "Mrs. Domenica Fritsch I",
+          "email": "elfrieda86@example.net"
+        },
+        {
+          "id": "4",
+          "name": "Jennie Senger",
+          "email": "jolie.jerde@example.net"
+        },
+        {
+          "id": "5",
+          "name": "Victoria Nikolaus MD",
+          "email": "greenholt.ulises@example.com"
+        }
+      ],
+      "paginatorInfo": {
+        "currentPage": 1,
+        "lastPage": 2,
+        "total": 10
+      }
+    }
+  }
+}
+
+
+
+
+//  user Create :  
+
+mutation{
+  createUser(name:"Sachin", email: "sachin@gmail.com", password: "Sachin@123"){
+    id
+    name
+  }
+}
+
+create USer Response :
+
+{
+  "data": {
+    "createUser": {
+      "id": "11",
+      "name": "Sachin"
+    }
+  }
+}
+
+
+
+
+
+// Update User :
+
+mutation{
+  updateUser(name:"Sumit", id:11){
+    id
+    name
+  }
+}
+
+
+// Update User Response :
+
+{
+  "data": {
+    "updateUser": {
+      "id": "11",
+      "name": "Sumit"
+    }
+  }
+}
+
+
+// delete User Schema :
+
+mutation {
+  deleteUser(id: 1) {
+    id
+  }
+}
+
+
+
+
+
+
 
 
 
